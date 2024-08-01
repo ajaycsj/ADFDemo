@@ -1,0 +1,41 @@
+{
+	"name": "Snowflake_ProductCategory",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Snowflake1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeV2Table",
+		"schema": [
+			{
+				"name": "PRODUCTCATEGORYID",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "PARENTPRODUCTCATEGORYID",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "NAME",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "ROWGUID",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "MODIFIEDDATE",
+				"type": "TIMESTAMP_NTZ"
+			}
+		],
+		"typeProperties": {
+			"schema": "RAW",
+			"table": "PRODUCTCATEGORY"
+		}
+	}
+}
