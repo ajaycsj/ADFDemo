@@ -49,7 +49,7 @@
 				]
 			},
 			{
-				"name": "Product_copy1",
+				"name": "Customer",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -68,7 +68,7 @@
 					},
 					"sink": {
 						"type": "SnowflakeV2Sink",
-						"preCopyScript": "Truncate table Raw.Product",
+						"preCopyScript": "Truncate table Raw.Customer",
 						"importSettings": {
 							"type": "SnowflakeImportCopyCommand"
 						}
@@ -83,13 +83,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "AzureSQL_Product",
+						"referenceName": "AzureSQL_Customer",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "Snowflake_Product",
+						"referenceName": "Snowflake_Customer",
 						"type": "DatasetReference"
 					}
 				]
