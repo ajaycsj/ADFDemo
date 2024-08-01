@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "ADFDemoSF"
+		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"Snowflake1_password": {
+			"value": ""
+		},
+		"AzureBlobStorage1_sasUri": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "saturuttu.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "ADFdemo"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "satu"
+		},
+		"Snowflake1_properties_typeProperties_database": {
+			"value": "ADFDEMO"
+		}
+	}
+}
