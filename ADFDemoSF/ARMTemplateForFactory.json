@@ -1363,6 +1363,44 @@
 				"[concat(variables('factoryId'), '/datasets/AzureSQL_SalesOrderDetail')]",
 				"[concat(variables('factoryId'), '/datasets/Snowflake_SalesOrder')]"
 			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ADFSSFTRIGDaily')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Started",
+				"pipelines": [
+					{
+						"pipelineReference": {
+							"referenceName": "ADFDemopipeline",
+							"type": "PipelineReference"
+						},
+						"parameters": {}
+					}
+				],
+				"type": "ScheduleTrigger",
+				"typeProperties": {
+					"recurrence": {
+						"frequency": "Day",
+						"interval": 1,
+						"startTime": "2024-08-01T08:16:00",
+						"timeZone": "India Standard Time",
+						"schedule": {
+							"minutes": [
+								0
+							],
+							"hours": [
+								10
+							]
+						}
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/ADFDemopipeline')]"
+			]
 		}
 	]
 }
